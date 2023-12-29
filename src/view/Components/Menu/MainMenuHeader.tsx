@@ -8,7 +8,6 @@ import {
   UsergroupAddOutlined,
 } from "@ant-design/icons";
 import { useLocation, useNavigate } from "react-router-dom";
-import { useAppDispatch } from "@/store/hook";
 
 type MenuItem = Required<MenuProps>["items"][number];
 

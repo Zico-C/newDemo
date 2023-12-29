@@ -1,5 +1,3 @@
-import React from "react";
-
 function User() {
   return (
     <div style={{ backgroundColor: "#202124", height: "100%", color: "#fff" }}>
