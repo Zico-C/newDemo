@@ -1,0 +1,1 @@
+import{j as e}from"./index-2aee2ef5.js";function t(){return e.jsx("div",{style:{backgroundColor:"#202124",height:"100%",color:"#fff"},children:e.jsx("h1",{style:{margin:0,textAlign:"center",fontSize:"3rem"},children:"User"})})}export{t as default};
