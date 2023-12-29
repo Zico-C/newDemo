@@ -1,7 +1,17 @@
 import { useEffect, useState } from "react";
-import { Button, Modal, Tooltip, Form, TreeSelect, Input, Tabs } from "antd";
+import {
+  Button,
+  Modal,
+  Tooltip,
+  Form,
+  TreeSelect,
+  Input,
+  Tabs,
+  Card,
+  Space,
+} from "antd";
 import type { TabsProps } from "antd";
-import { SettingOutlined } from "@ant-design/icons";
+import { CloseOutlined, SettingOutlined } from "@ant-design/icons";
 import DeviceAPI from "@/view/queries";
 import { Status } from "../../queries";
 import { useAppDispatch, useAppSelector } from "@/store/hook";
@@ -173,6 +183,91 @@ function SiderModal() {
             <Form.Item label="DeviceSelect" name="DeviceSelect" required>
               <TreeSelect {...tProps} />
             </Form.Item>
+            {/* test --First */}
+            <Form.List name="Group">
+              {(fields, { add, remove }) => (
+                <div
+                  style={{
+                    display: "flex",
+                    rowGap: 16,
+                    flexDirection: "column",
+                  }}
+                >
+                  {fields.map((field, index) => (
+                    <Card
+                      size="small"
+                      title={`Group ${field.name + 1}`}
+                      key={field.key}
+                      extra={
+                        <CloseOutlined
+                          onClick={() => {
+                            remove(field.name);
+                          }}
+                        />
+                      }
+                    >
+                      <Form.Item
+                        label={`CreateGroup${index + 1}`}
+                        name="CreateGroup"
+                      >
+                        <Input />
+                      </Form.Item>
+
+                      {/* Nest Form.List */}
+                      <Form.Item label="DeviceSelect" name="DeviceSelect">
+                        <Form.List name={[field.name, "list"]}>
+                          {(subFields, subOpt) => (
+                            <div
+                              style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                rowGap: 16,
+                              }}
+                            >
+                              {subFields.map((subField) => (
+                                <Space key={subField.key}>
+                                  <Form.Item
+                                    noStyle
+                                    name={[subField.name, "first"]}
+                                    label=""
+                                  >
+                                    <Input placeholder="first" />
+                                  </Form.Item>
+                                  <Form.Item
+                                    noStyle
+                                    name={[subField.name, "second"]}
+                                  >
+                                    <Input placeholder="second" />
+                                  </Form.Item>
+                                  <CloseOutlined
+                                    onClick={() => {
+                                      subOpt.remove(subField.name);
+                                    }}
+                                  />
+                                </Space>
+                              ))}
+                              <Button
+                                type="dashed"
+                                onClick={() => subOpt.add()}
+                                block
+                              >
+                                + Add Sub Item
+                              </Button>
+                            </div>
+                          )}
+                        </Form.List>
+                      </Form.Item>
+                    </Card>
+                  ))}
+
+                  <Button type="dashed" onClick={() => add()} block>
+                    + Add Item
+                  </Button>
+                </div>
+              )}
+            </Form.List>
+
+            {/* test --End */}
           </Form>
         </>
       ),
@@ -233,3 +328,20 @@ function SiderModal() {
 }
 
 export default SiderModal;
+// const x = {
+//   title: values.Name,
+//   key: values.Name,
+//   children: {
+//     title: values.Age,
+//     key: values.Age,
+//   },
+// };
+
+// // 檢查 values.Website 是否存在
+// if (values.Website) {
+//   // 只有在 values.Website 存在時才添加 children 的 children
+//   x.children.children = {
+//     title: values.Website,
+//     key: values.Website,
+//   };
+// }
