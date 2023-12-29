@@ -1,0 +1,29 @@
+// .xxx {
+//   font-size: 3rem;
+// }
+.ant-menu-submenu-title {
+  margin-bottom: 16px !important;
+}
+.ant-menu-title-content {
+  font-size: 16px;
+}
+:where(.css-dev-only-do-not-override-gzal6t).ant-layout
+  .ant-layout-sider-trigger {
+  background-color: #202124;
+}
+:where(.css-dev-only-do-not-override-gzal6t).ant-tree
+  .ant-tree-node-content-wrapper.ant-tree-node-selected,
+:where(.css-dev-only-do-not-override-gzal6t).ant-tree
+  .ant-tree-checkbox
+  + span.ant-tree-node-selected {
+  background-color: #1677ff;
+  color: #fff;
+}
+:where(.css-dev-only-do-not-override-gzal6t).ant-tree .ant-tree-switcher {
+  width: 30px;
+}
+:where(.css-dev-only-do-not-override-gzal6t).ant-tree-show-line
+  .ant-tree-switcher-line-icon {
+  vertical-align: -0.25rem;
+  font-size: 19px;
+}

@@ -1,0 +1,74 @@
+{
+  "deviceInfo": {
+    "description": "Device",
+    "updatetime": "2023/12/26",
+    "status": [
+      {
+        "id": 0,
+        "Device_Location": "101大樓",
+        "Device_ID": "0x361000001",
+        "Health": "Good",
+        "Signal": "Excellent",
+        "Model": "M331",
+        "statusNum": 1,
+        "latitude": "24.157226713407052",
+        "longitude": "120.66608423088738"
+      },
+      {
+        "id": 1,
+        "Device_Location": "師大夜市",
+        "Device_ID": "0x361000002",
+        "Health": "Good",
+        "Signal": "Excellent",
+        "Model": "M331",
+        "statusNum": 1,
+        "latitude": "24.157226713407052",
+        "longitude": "120.66608423088738"
+      },
+      {
+        "id": 2,
+        "Device_Location": "士林捷運站",
+        "Device_ID": "0x361000003",
+        "Health": "Good",
+        "Signal": "Excellent",
+        "Model": "M331",
+        "statusNum": 1,
+        "latitude": "24.157226713407052",
+        "longitude": "120.66608423088738"
+      },
+      {
+        "id": 3,
+        "Device_Location": "北上月台",
+        "Device_ID": "0x361000004",
+        "Health": "Warning",
+        "Signal": "Good",
+        "Model": "M331",
+        "statusNum": 1,
+        "latitude": "24.157226713407052",
+        "longitude": "120.66608423088738"
+      },
+      {
+        "id": 4,
+        "Device_Location": "南下月台",
+        "Device_ID": "0x361000005",
+        "Health": "Warning",
+        "Signal": "Good",
+        "Model": "M330",
+        "statusNum": 1,
+        "latitude": "24.157226713407052",
+        "longitude": "120.66608423088738"
+      },
+      {
+        "id": 5,
+        "Device_Location": "陽明公園",
+        "Device_ID": "0x361000006",
+        "Health": "Good",
+        "Signal": "Excellent",
+        "Model": "M330",
+        "statusNum": 1,
+        "latitude": "24.157226713407052",
+        "longitude": "120.66608423088738"
+      }
+    ]
+  }
+}
