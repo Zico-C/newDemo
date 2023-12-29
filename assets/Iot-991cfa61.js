@@ -1,0 +1,1 @@
+import{j as t}from"./index-05f1f1f0.js";function r(){return t.jsx(t.Fragment,{children:t.jsx("div",{style:{height:"100%"},children:t.jsx("iframe",{src:"http://127.0.0.1:1880/#flow/89b95977629677ad",style:{height:"100%",width:"100%",border:0}})})})}export{r as default};
